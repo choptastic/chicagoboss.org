@@ -1,0 +1,3 @@
+
+msgid "how are you"
+msgstr "vie geht's"

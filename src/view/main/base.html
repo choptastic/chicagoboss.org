@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8" />
+	
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<title>Chicago Boss: {% block title %}Home{% endblock %}</title>
+	<link rel="stylesheet" href="/includes/css/main.css">
+	<script src="/includes/js/main.js"></script>
+
+	<!-- IE Fix for HTML5 Tags -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Google analytics -->
+	<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-46635298-1', 'chicagoboss.org');
+	ga('send', 'pageview');
+	</script>
+
+</head>
+<body>
+		<header id="nav-global-container">
+			<span id="forkongithub"><a href="https://github.com/ChicagoBoss/ChicagoBoss">Fork me on GitHub</a></span>
+			<aside id="logo">
+				<a href="index.htm">
+					<svg id="logo-large" height="99" width="252" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+					  <image x="" y="" height="99" width="252"  xlink:href="/images/logo.svg" />
+					</svg>
+					<svg id="logo-small" height="79" width="232" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+					  <image x="" y="" height="79" width="232"  xlink:href="/images/logo.svg" />
+					</svg>
+				</a>
+			</aside>
+			<nav id="nav-global">
+	              	<a href="/documentation.htm">Documentation</a>
+	              	<a href="/about.htm">About</a>
+	              	<a href="/community.htm">Community</a>
+	              	<a href="/download.htm" class="download">Download <span>&#128229;</span></a>
+	              	<a href="/contact.htm">Contacts</a>                
+			</nav>
+		</header>
+		<section class="container">
+			
+			<div class="sixteen columns">
+				<article id="content-container" class="padding-twenty">
+					{% block content %}
+						Enter some sweet content right here.
+					{% endblock %}
+				</article>
+			</div>
+			
+		</section>
+		<footer class="clearfix">
+			<nav id="nav-footer" class="clearfix">
+	               <a href="/documentation.htm">Documentation</a>
+	               <a href="/about.htm">About</a>
+	               <a href="/community.htm">Community</a>
+	               <a href="/download.htm" class="download">Download</a>
+	               <a href="/contact.htm">Contacts</a>  
+			</nav>
+		</footer>
+</body>
+</html>
