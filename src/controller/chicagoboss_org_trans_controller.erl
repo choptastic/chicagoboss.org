@@ -64,4 +64,4 @@ filter('GET',_) ->
 %% yoiur template will result in the variable first being replaced by the
 %% contents of MyPhrase, and then translated according to its contents.
 variable('GET', [MyPhrase]) ->
-	{ok, [{my_phrase, MyPhrase}], [{"Content-Language", "de"}}.
+	{ok, [{my_phrase, MyPhrase}], [{"Content-Language", "de"}]}.

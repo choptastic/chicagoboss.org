@@ -13,3 +13,6 @@ about('GET', _) ->
 
 community('GET', _) ->
 	ok.
+
+contact('GET', _) ->
+	ok.
