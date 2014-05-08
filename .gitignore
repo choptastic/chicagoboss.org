@@ -12,3 +12,5 @@ src/boss/*.dtl.erl
 *.sw?
 ebin/*
 log/*
+src/view/api
+priv/static/api

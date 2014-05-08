@@ -1,3 +1,4 @@
+% vim: ts=4 sw=4 et ft=erlang
 % Routes file.
 
 % Formats: 
@@ -16,7 +17,13 @@
 % Front page
 {"/", [{controller, "main"}, {action, "index"}]}.
 
+%% Main page files get passed to the 'main' controller, with the captured url being used as the action.
 {"/(index|documentation|download|contact|about|community)(?:\\.html?)?", [{controller, "main"}, {action, '$1'}]}.
+
+%% API Documentation.  Always use the 'api' controller and the 'api' action.
+%We're capturing which file was actually requested, and passing that to the
+%controller, which will be used to load the requested view.
+{"/api/([\\w-]+)(?:\\.html?)?", [{controller, "api"}, {action, "api"}, {view, '$1'}]}.
 
 % 404 File Not Found handler
 % {404, [{controller, "world"}, {action, "lost"}]}.

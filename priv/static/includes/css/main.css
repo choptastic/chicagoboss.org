@@ -158,7 +158,20 @@ hr {
 	margin: 20px 0;
 }
 
-#content-container p {
+#codelinks h3 {
+	--font-family: 'Merriweather', Cambria, Georgia, 'Entypo', 'Entyposocial', serif;
+	font-family: 'Open Sans', Calibri, Candara, Segoe, "Segoe UI", Optima, 'Entypo', 'Entyposocial', Arial, sans-serif;
+	font-size:140%;
+	margin: 0;
+	font-weight: 300;
+}
+
+#codelinks {
+	text-align:right;
+}
+
+#content-container p,
+#codelinks {
 	font-family: 'Open Sans', Calibri, Candara, Segoe, "Segoe UI", Optima, 'Entypo', 'Entyposocial', Arial, sans-serif;
 	font-weight: 300;
 	font-size: .8em;
@@ -173,12 +186,14 @@ hr {
 	font-size: 250%;
 }
 
-#content-container a {
+#content-container a,
+#codelinks a{
 	color: #BC7220;
 	text-decoration: none;
 }
 
-#content-container a:hover {text-decoration: underline;}
+#content-container a:hover,
+#codelinks a:hover {text-decoration: underline;}
 
 #content-container ul {margin-left: 20px;}
 
@@ -449,6 +464,10 @@ footer span {padding: 10px 20px;}
 		font-size: 80%;
 	}
 	#content-container .illustration h3 {font-size: 70%;}
+	#codelinks {
+		
+	}
+
 
 	footer {font-size: 80%;}
 	footer a {display: block;}
