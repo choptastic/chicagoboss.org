@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+	<article id="content-container" class="padding-twenty">
+		<div class="row clearfix">
+			<div class="fourteen columns alpha">
+				<h2>
+					{% if header %}
+						{{ header }}
+					{% else %}
+						Demos
+					{% endif %}
+				</h2>
+				{% if subheader %}
+					<h3>
+						{{ subheader|safe }}
+					</h3>
+				{% endif %}
+				<ul>
+					{% for path,label,desc in demos %}
+						<li>
+							<a href="{{ path }}">{{label}}</a>
+							{% if desc %}
+								- {{ desc }}
+							{% endif %}
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+	</article>
+{% endblock %}
