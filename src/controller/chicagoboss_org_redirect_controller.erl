@@ -26,15 +26,15 @@ not_found('GET', _) ->
 
 render_other('GET', _) ->
 	OtherLocation = [{action, index}],
-	DemoLinks = [{"", "Back to Redirect Demos"}],
 	Variables = [
 				 {header, "This is the index view even though we're in the render_other action. How exciting!"},
+				 {subheader, "<a href='/redirect'>&larr; Back to Redirection Demos</a>"},
 				 {codelinks, [
 								codelinks:controller_only(?MODULE),
 								codelinks:view_only(?MODULE, index),
 								codelinks:view_only("base.html")
 							 ]},
-				 {demos, DemoLinks}
+				 {demos, []}
 				],
 	{render_other, OtherLocation, Variables}.
 
@@ -45,7 +45,7 @@ action_other('GET', ["other_controller"]) ->
 	{action_other, [{controller, main}, {action, from_demo}]}.
 
 moved('GET', ["string"]) ->
-	{moved, "http://google.com"};
+	{moved, "http://github.com/ChicagoBoss"};
 
 moved('GET', ["action"]) ->
 	{moved, [{controller, "redirect"}, {action, "moved_destination"}]}.
